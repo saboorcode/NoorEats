@@ -1,0 +1,146 @@
+body {
+    color: white;
+}
+
+* {
+    text-decoration: none;
+}
+
+.container {
+    margin: -2.5em 5% 0 5%;
+    padding: 2em;
+}
+
+.hero-section {
+    background-color: black;
+    padding: .5em 1em 5em 1em;
+}
+
+.menu-section {
+    color: black;
+    text-align: center;
+}
+
+.navbar {
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 1em;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This creates space between 2 groups of elements - Nav logo and Nav links */
+}
+
+.nav-logo {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-links a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+.nav-links button {
+    background-color: white;
+    color: black;
+    padding: 5px;
+}
+
+.nav-links button a {
+    color: black;
+    padding: 5px;
+    margin-right: 0;
+}
+
+.hero {
+    color: white;
+    padding: 5em;
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* This creates space between 2 groups of elements - Nav logo and Nav links */
+}
+
+.hero h1 {
+    font-size: 5em;
+}
+
+.hero img {
+    height: 50%;
+    animation: spin 80s infinite linear;
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+.menu {
+
+}
+
+.food-box img {
+    height: 15em;
+    width: 17em;
+    padding-right: 1em;
+}
+
+.food-box p:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: -3.2em;
+}
+
+.food-box p {
+    text-align: left;
+}
+
+.food-box {
+    border: 1px solid black;
+    align-items: center;
+    width: 500px;
+    height: 250px;
+    padding: 1em;
+    margin: 1em 1em 1em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-desc span {
+    text-decoration: underline;
+}
+
+.menu-links {
+    margin-left: -3em;
+}
+
+.menu-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.menu-links a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu-links a:hover {
+    color: red;
+}
