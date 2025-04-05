@@ -1,0 +1,342 @@
+{
+    "menu" : {
+        "main" : {
+            "biriyani" : [
+                {
+                    "name": "Chicken",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Chicken Boneless",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "70"
+                },
+                {
+                    "name": "Goat",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "80"
+                },
+                {
+                    "name": "Veggie",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                }
+            ],
+            "curry" : [
+                {
+                    "name": "Chicken Karahi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Chicken Quorma",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Chicken Handi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Butter Chicken",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Chicken Tika Masal",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Palak Chicken",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "65"
+                },
+                {
+                    "name": "Palak Goat",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "66"
+                },
+                {
+                    "name": "Goat Karahi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "75"
+                },
+                {
+                    "name": "Palak Gosht",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "70"
+                },
+                {
+                    "name": "Beef Haleem",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Chicken Haleem",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Nihari Beef",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Nihari Chicken",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                }
+            ]
+        },
+        "veggies" : {
+            "vegeterian" : [
+                {
+                    "name": "Shahi Paneer",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Matar Paneer",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Karahi Paneer",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Palak Paneer",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                },
+                {
+                    "name": "Malai Kofta",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "60"
+                }
+            ],
+            "vegetables" : [
+                {
+                    "name": "Mixed Vegetables",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Aaloo Gobi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Aaloo Palak",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Bhindi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Aaloo Baingan",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Afghani Baingan",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "karela Pyaz",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Aaloo Methi",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                },
+                {
+                    "name": "Saag",
+                    "desc": "", 
+                    "ingredients": "",
+                    "price": "50"
+                }
+            ]
+        },
+        "appetizers" : [
+            {
+                "name": "Chicken Puff Patties",
+                "desc": "", 
+                "ingredients": "",
+                "price": "15"
+            },
+            {
+                "name": "Chicken Spring Roll",
+                "desc": "", 
+                "ingredients": "",
+                "price": "15"
+            },
+            {
+                "name": "Veggie Spring Roll",
+                "desc": "", 
+                "ingredients": "",
+                "price": "15"
+            },
+            {
+                "name": "Chicken Chapli Kabab",
+                "desc": "", 
+                "ingredients": "",
+                "price": "36"
+            },
+            {
+                "name": "Beef Chapli Kabab",
+                "desc": "", 
+                "ingredients": "",
+                "price": "36"
+            },
+            {
+                "name": "Chicken Shami",
+                "desc": "", 
+                "ingredients": "",
+                "price": "20"
+            },
+            {
+                "name": "Beef Shami",
+                "desc": "", 
+                "ingredients": "",
+                "price": "20"
+            },
+            {
+                "name": "Paneer Pakora",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Veggie Pakora",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Potato Cutlet",
+                "desc": "", 
+                "ingredients": "",
+                "price": "12"
+            }
+        ],
+        "chinese" : [
+            {
+                "name": "Chicken Chow Mein",
+                "desc": "", 
+                "ingredients": "",
+                "price": "50"
+            },
+            {
+                "name": "Orange Chicken",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Chicken Shashlik",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Pineapple Chicken",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Chicken Fried Rice",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            }
+        ],
+        "pasta" : [
+            {
+                "name": "Chicken Pasta",
+                "desc": "", 
+                "ingredients": "",
+                "price": "55"
+            }
+        ],
+        "dessert" : [
+            {
+                "name": "Kheer",
+                "desc": "", 
+                "ingredients": "",
+                "price": "50"
+            },
+            {
+                "name": "Custard Fruit Trifle",
+                "desc": "", 
+                "ingredients": "",
+                "price": "50"
+            },
+            {
+                "name": "Shahi Tukra",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Gajar Halwa",
+                "desc": "", 
+                "ingredients": "",
+                "price": "60"
+            },
+            {
+                "name": "Sheer Khurma",
+                "desc": "", 
+                "ingredients": "",
+                "price": "50"
+            },
+            {
+                "name": "Sooji Halwa",
+                "desc": "", 
+                "ingredients": "",
+                "price": "12"
+            }
+        ]
+    }
+}

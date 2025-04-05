@@ -105,7 +105,7 @@ body {
 .food-box p:first-of-type {
     font-weight: bold;
     font-size: 20px;
-    margin-top: -3.2em;
+    margin-top: -2em;
 }
 
 .food-box p {
@@ -117,7 +117,6 @@ body {
     align-items: center;
     width: 500px;
     height: 250px;
-    padding: 1em;
     margin: 1em 1em 1em 0;
     display: flex;
     justify-content: space-between;
@@ -125,6 +124,10 @@ body {
 
 .food-desc span {
     text-decoration: underline;
+}
+
+.food-desc {
+    padding: -1em 2em 5em 0;
 }
 
 .menu-links {
