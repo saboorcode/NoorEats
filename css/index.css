@@ -1,5 +1,6 @@
 body {
     color: white;
+    background-color: black;
 }
 
 * {
@@ -12,12 +13,10 @@ body {
 }
 
 .hero-section {
-    background-color: black;
     padding: .5em 1em 5em 1em;
 }
 
 .menu-section {
-    color: black;
     text-align: center;
 }
 

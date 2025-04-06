@@ -1,0 +1,51 @@
+body {
+    text-align: center;
+}
+
+.navbar {
+    padding: 0px 15px 0px 15px;
+    margin-bottom: 1em;
+    
+}
+
+.navdiv {
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* This creates space between 2 groups of elements - Nav logo and Nav links */
+}
+
+.nav-logo {
+    color: black;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+.nav-links button {
+    color: black;
+    padding: 5px;
+}
+
+.nav-links button a {
+    color: black;
+    padding: 5px;
+    margin-right: 0;
+}
