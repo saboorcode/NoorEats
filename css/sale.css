@@ -26,18 +26,6 @@ body {
     margin-right: 2em;
 }
 
-.dashboard {
-    display: flex;
-}
-
-.dashboard div:nth-of-type(2) {
-    width: 75em;
-}
-
-.dashboard-2 {
-    display: flex;
-}
-
 .table-head {
     border-bottom: 5px solid rgb(205, 205, 205);
     display: flex;
@@ -50,7 +38,7 @@ body {
 }
 
 .table {
-    height: 40em;
+    height: 50em;
     background-color: white;
     box-shadow: 5px 5px 5px #b7b7b7;
     overflow: hidden;
@@ -70,41 +58,4 @@ body {
 
 .table-header {
     margin-left: 2em;
-}
-
-.status-client, 
-.status-total-sales, 
-.status-total-sold, 
-.status-menu-items {
-    height: 100px;
-    width: 300px;
-    margin-right: 5em;
-    background-color: white;
-    box-shadow: 5px 5px 5px #b7b7b7;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    padding: 3em;
-}
-
-.status-dashboard {
-    display: flex;
-    margin-left: 1em;
-    margin-bottom: 3em;
-}
-
-.status-left p:first-of-type {
-    margin-top: .1em;
-    font-size: 50px;
-    font-weight: bold;
-}
-
-.status-left p:nth-of-type(2) {
-    margin-top: -2em;
-    font-size: 25px;
-    color: grey;
-}
-
-.status-picture img {
-    height: 100px;
 }

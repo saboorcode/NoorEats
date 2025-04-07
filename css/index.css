@@ -1,5 +1,5 @@
 body {
-    color: white;
+    color: rgb(216, 207, 207);
     background-color: black;
 }
 
@@ -32,7 +32,7 @@ body {
 }
 
 .nav-logo {
-    color: white;
+    color: black;
     font-size: 35px;
     font-weight: 600;
 }
@@ -43,7 +43,7 @@ body {
 }
 
 .nav-links a {
-    color: white;
+    color: black;
     font-size: 18px;
     font-weight: bold;
     margin-right: 25px;
