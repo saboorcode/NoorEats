@@ -1,7 +1,7 @@
 # GenericCateringKitchen
  Catering Business Website displaying a menu of authentic, delicious Indian/Pakistani food
 
-# Dashboard implemnation progress (updated 8/3/2025)
+# Dashboard implementation progress (updated 8/3/2025)
 - Designed the Dashboard using HTML/CSS without framework. (4/1/2025)
 ![image](https://github.com/user-attachments/assets/c02767b7-259b-4809-ab61-2cf52c327927)
 
