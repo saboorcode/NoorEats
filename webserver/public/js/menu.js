@@ -25,9 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // display menu (name, prices, etc)
         for (let i = 0; i < menu.length; i++){
             let row = document.createElement("ul")
-            row.setAttribute("id", menu[i].type)
+            row.setAttribute("class", menu[i].type) // use class attribute for repeating instead of ID.  ID is unique identifer.  lesson learnt
 
             let li = document.createElement("li")
+            li.textContent = i
+            row.appendChild(li)
+
+            li = document.createElement("li")
             li.textContent = menu[i].dish
             row.appendChild(li)
 
@@ -56,31 +60,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /////
 
-        const originalTableBody = tableBody // original table rows before select
+        // https://developer.mozilla.org/en-US/docs/Web/API/Node/cloneNode#example
+        // Make a copy of parent element because .replaceChildren() deletes the rest...
+        // Copy before selection function because children even copied ones are rid of as well
+        const copyOfTableBody = tableBody.cloneNode(true)
 
         const el = document.getElementById("food-option")
         el.addEventListener("change", (event) => {
+            tableBody = copyOfTableBody
+
             const selectedType = event.target.value;
             console.log("Selected food type:", selectedType)
 
             //console.log(tableBody.children[0].getAttribute("id"))
 
-            const rowCount = tableBody.childElementCount
-            //console.log(rowCount)
+            const elementsByClass = tableBody.querySelectorAll("."+selectedType) // returns NodeList of children elements by class selected
+            //console.log(elementsByClass)
 
-
-            for (let i = 0; i < rowCount; i++){
-                //console.log(tableBody.children[i].getAttribute("id"))
-
-                //console.log(tableBody.children[i].id)
-
-                if (selectedType != tableBody.children[i].id){
-                        console.log(tableBody.children[i].id)
-                        let element = document.getElementById(tableBody.children[i].id)
-                        element.remove()
-                    }
-
-            }
+            tableBody.replaceChildren(...elementsByClass)
         })
 
       } catch (error) {
