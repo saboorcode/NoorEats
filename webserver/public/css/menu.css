@@ -38,10 +38,10 @@ body {
 }
 
 .table {
-    height: 50em;
+    /*height: 50em;*/
     background-color: white;
     box-shadow: 5px 5px 5px #b7b7b7;
-    overflow: hidden;
+    /*overflow: hidden;*/
     margin: 1em;
 }
 
@@ -74,4 +74,15 @@ body {
 
 .menu-pricing-options label {
     font-size: 16px;
+}
+
+.table-row li {
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+    margin-right: 3em;
+}
+
+.table-row {
+    margin-left: 2em;
 }

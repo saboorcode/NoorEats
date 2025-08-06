@@ -63,6 +63,23 @@ app.get('/totalcustomers', (req, res) => {
   count()
 })
 
+app.get('/getmenu' , (req, res) => {
+  async function getMenu(){
+    const { data, error } = await supabase
+      .from('menu')
+      .select('*')
+
+      if (!error){
+        console.log(data)
+        res.send(data)
+      } else {
+        res.sendStatus(500)
+      }
+  }
+
+  getMenu()
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

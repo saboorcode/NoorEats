@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="/css/menu.css">
+    <script src="js/menu.js"></script>
 </head>
 
 <body>
@@ -28,18 +29,19 @@
                 <div class="menu-option">
                     <div class="food-options">    
                         <select id="food-option">
-                            <option value="" selected>Appetizers</option>
-                            <option value="">ALL</option>
-                            <option value="">Chicken</option>
-                            <option value="">Beef</option>
-                            <option value="">Goat</option>
-                            <option value="">Veggie</option>
-                            <option value="">Sweets</option>
-                            <option value="">Chinese</option>
-                            <option value="">Pasta</option>
+                            <option value="appetizers">Appetizers</option>
+                            <option value="all" selected>ALL</option>
+                            <option value="chicken">Chicken</option>
+                            <option value="beef">Beef</option>
+                            <option value="goat">Goat</option>
+                            <option value="veggie">Veggie</option>
+                            <option value="sweets">Sweets</option>
+                            <option value="chinese">Chinese</option>
+                            <option value="pasta">Pasta</option>
                           </select>
                     </div>
 
+                    <!--
                     <div class="menu-pricing-options">
                             <div>
                                 <input type="checkbox" id="" name="half-price" checked />
@@ -47,20 +49,23 @@
                             </div>
                         
                             <div>
-                                <input type="checkbox" id="" name="half-price" />
+                                <input type="checkbox" id="" name="half-price" checked />
                                 <label for="half-price">Quarter Price</label>
                             </div>
 
                             <div>
-                                <input type="checkbox" id="" name="half-price" />
+                                <input type="checkbox" id="" name="half-price" checked />
                                 <label for="half-price">Full Price</label>
                             </div>
 
+                            
                             <div>
                                 <input type="checkbox" id="" name="half-price" />
                                 <label for="half-price">Per Price</label>
                             </div>
+                            
                     </div>
+                    -->
 
                 </div>
             </div>
@@ -73,13 +78,16 @@
                     <li>Quarter Price</li>
                     <li>Half Price</li>
                     <li>Full Price</li>
+
+                    <!--
                     <li>Per Price</li>
                     <li>Type</li>
+                    -->
                 </ul>
             </div>
 
-            <div class="table-row">
-test
+            <div class="table-row" id="tablebody">
+
             </div>
         </div>
     </div>
