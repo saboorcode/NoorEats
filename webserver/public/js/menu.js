@@ -63,20 +63,24 @@ document.addEventListener('DOMContentLoaded', () => {
             const selectedType = event.target.value;
             console.log("Selected food type:", selectedType)
 
-            console.log(tableBody)
+            //console.log(tableBody.children[0].getAttribute("id"))
 
             const rowCount = tableBody.childElementCount
-            console.log(rowCount)
+            //console.log(rowCount)
 
-            console.log(tableBody)
-            /*
+
             for (let i = 0; i < rowCount; i++){
-                if ()
-            }
-                */
+                //console.log(tableBody.children[i].getAttribute("id"))
 
-            const selected = document.getElementById("chicken")
-            selected.remove()
+                //console.log(tableBody.children[i].id)
+
+                if (selectedType != tableBody.children[i].id){
+                        console.log(tableBody.children[i].id)
+                        let element = document.getElementById(tableBody.children[i].id)
+                        element.remove()
+                    }
+
+            }
         })
 
       } catch (error) {
