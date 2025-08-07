@@ -4,18 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./css/client.css">
-
-    
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/clients.js"></script>
+    <link rel="stylesheet" href="./css/sale.css">
 </head>
 
 <body>
     <div class="navbar">
         <h1><a href="./dashboard.html" style="text-decoration: none; color: black;">GenericCateringKitchen's Dashboard</a></h1>
 
-        <a href="/index.html"><button>Home</button></a>
+        <a href="./index.html"><button>Home</button></a>
     </div>
     
     <div class="container">
@@ -27,27 +23,28 @@
 
                 <div class="table-head">
                     <div>
-                        <h1 style="margin: -10px 0 0 1em;">Clients</h1>
+                        <h1 style="margin: -10px 0 0 1em;">Expenses</h1>
                     </div>
 
                 </div>
 
-                <div class="table-header" id="table-header">
+                <div class="table-header">
                     <ul>
-                        <li>Id</li>
-                        <li>Name</li>
-                        <li>Phone Number</li>   
-                        <li>No. served</li>
+                        <li>Expense ID</li>
+                        <li>Category</li>
+                        <li>Amount</li>
+                        <li>Date</li>
+                        <li>Items Bought</li>
+                        <li>Vendor</li>
                         <li>Notes</li>
                     </ul>
                 </div>
 
-                <div class="table-body" id="table-body">
-                    
+                <div class="table-row">
+
                 </div>
             </div>
         </div>
     </div>
-
 </body>
 </html>
