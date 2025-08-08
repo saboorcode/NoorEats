@@ -1,148 +1,38 @@
 body {
-    color: rgb(216, 207, 207);
-    background-color: black;
-}
-
-* {
-    text-decoration: none;
-}
-
-.container {
-    margin: -2.5em 5% 0 5%;
-    padding: 2em;
-}
-
-.hero-section {
-    padding: .5em 1em 5em 1em;
-}
-
-.menu-section {
+    margin: 0;
     text-align: center;
 }
 
-.navbar {
-    padding: 0px 15px 0px 15px;
-    margin-bottom: 1em;
+#menu-section {
+    text-align: center;
+    border: black 1px solid
 }
 
-.navdiv {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* This creates space between 2 groups of elements - Nav logo and Nav links */
+#menu-option {
+        display: flex;
+        justify-content: center; /* Centers horizontally */
+        align-items: center;    /* Centers vertically */
 }
 
-.nav-logo {
-    color: black;
-    font-size: 35px;
-    font-weight: 600;
+.menu-option li {
+    padding-right: 2em;
 }
 
-.nav-links li {
-    list-style: none;
-    display: inline-block;
-}
-
-.nav-links a {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    margin-right: 25px;
-}
-
-.nav-links a:hover {
-    color: red;
-}
-
-.nav-links button {
-    background-color: white;
-    color: black;
-    padding: 5px;
-}
-
-.nav-links button a {
-    color: black;
-    padding: 5px;
-    margin-right: 0;
-}
-
-.hero {
-    color: white;
-    padding: 5em;
-    align-items: center;
-    display: flex;
-    justify-content: space-between; /* This creates space between 2 groups of elements - Nav logo and Nav links */
-}
-
-.hero h1 {
-    font-size: 5em;
-}
-
-.hero img {
-    height: 50%;
-    animation: spin 80s infinite linear;
-}
-
-@keyframes spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-.menu {
-
-}
-
-.food-box img {
-    height: 15em;
-    width: 17em;
-    padding-right: 1em;
-}
-
-.food-box p:first-of-type {
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: -2em;
-}
-
-.food-box p {
-    text-align: left;
-}
-
-.food-box {
-    border: 1px solid black;
-    align-items: center;
-    width: 500px;
-    height: 250px;
-    margin: 1em 1em 1em 0;
-    display: flex;
-    justify-content: space-between;
-}
-
-.food-desc span {
-    text-decoration: underline;
-}
-
-.food-desc {
-    padding: -1em 2em 5em 0;
-}
-
-.menu-links {
-    margin-left: -3em;
-}
-
-.menu-links li {
-    list-style: none;
-    display: inline-block;
-}
-
-.menu-links a {
-    color: black;
+.menu-option a {
     text-decoration: none;
+    color: black;
 }
 
-.menu-links a:hover {
-    color: red;
+.menu-option {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu-list ul {
+    display: flex;
+}
+
+.menu-list li {
+    list-style-type: none;
+    margin-right: 2em;
 }
