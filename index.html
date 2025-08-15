@@ -1,47 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>NoorEats</title>
 
-<head>
-    <title>NoorEats</title>
+        <link rel="stylesheet" href="./css/index.css">
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="js/index.js"></script>
 
-    <link rel="stylesheet" href="./css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="js/index.js"></script>
-</head>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Hurricane&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&family=Hammersmith+One&family=Hurricane&display=swap" rel="stylesheet">
+    </head>
 
-<body>
-    <div>
-        <div id="navbar">
-            <h1>NoorEats</h1>
-        </div>
+    <body>
+        <div>
+            <div id="navbar" class="navbar">
+                <div>
+                    <h1>NoorEats</h1>
+                </div>
 
-        <div id="menu-section">
+                <div class="navbar-links">
+                    <ul>
+                        <li>HOME</li>
+                        <li>MENU</li>
+                        <li>ABOUT</li>
+                        <li class="contact-link">CONTACT</li>
+                    </ul>
+                </div>
+                
+            </div>
+
+            <div id="navbar-mobile" class="navbar-mobile">
+                <div>
+                    <h1>NoorEats</h1>
+                </div>
+
+                <div>
+                    <button id="menu-open-button" class="menu-open-button"><img src="images/hamburger.png" height="70"></button>
+                </div>
+            </div>
+
+            <div id="hamburger-menu" class="hamburger-menu">
+                <div class="top-menu" style="display: flex; justify-content: space-between;">
+                    <h1>NoorEats</h1>
+
+                    <button id="menu-close-button">X</button>
+                </div>
+
+                <div>
+                    <ul>
+                        <li>HOME</li>
+                        <li>MENU</li>
+                        <li>ABOUT</li>
+                        <li>Proudly Serving People <br> Of Central Valley</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="hero">
+                <div>
+                    <img src="images/california.png" height="800em" style="margin-top: -3em" class="california">
+                </div>
+
+                <div>
+                    <div class="hero-nooreats">
+                        <h1>NoorEats</h1>
+                        <img src="images/halal.png" height="80">
+                    </div>
+                    
+                    <h1 style="margin-top: -.5em;">Serving People <br> Of Central Valley</h1>
+                    <p>BRINGING THE FLAVORS OF INDIA & PAKISTAN TO YOUR TABLE</p>
+
+                    <ul>
+                        <li>Served <span style="color: #FF8635">2000+</span> Happy Customers</li>
+                        <li>Catered for Events of <span style="color: #FF8635">50-150 people</span></li>
+                        <li>Pick-Up or Delivery Available</li>
+                        <li>Hot, Fresh, and Authentic Indian/Pakistani <br> Cuisine</li>
+                    </ul>
+                </div>
+
+                
+            </div>
+
+            <div style="margin-top: -5em;">
+                <h1>Frequently Ordered Foods</h1>
+
+                <div class="foods-gallery">
+                    <div>
+                        <h4>Chicken Sandwiches</h4>
+                        <img src="images/chicken-sandwiches.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Chicken 65</h4>
+                        <img src="images/chicken65.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Goat Karahi</h4>
+                        <img src="images/goat-karahi.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Palak Chicken</h4>
+                        <img src="images/palak-chicken.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Shahi Tukra</h4>
+                        <img src="images/sweets/shahi-tukra.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Zarda Rice</h4>
+                        <img src="images/sweets/zarda-rice.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Peanut Chicken</h4>
+                        <img src="images/peanut-chicken.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Chicken Manchurian</h4>
+                        <img src="images/chicken-manchurian.jpg">
+                    </div>
+                </div>
+            </div>
+
             <div>
                 <h1>Menu</h1>
-            </div>
 
-            <div id="menu-option">
-                <ul class="menu-option">
-                    <a href=""><li>Appetizers</li></a>
-                    <a href=""><li>Chicken</li></a>
-                    <a href=""><li>Beef</li></a>
-                    <a href=""><li>Goat</li></a>
-                    <a href=""><li>Veggie</li></a>
-                    <a href=""><li>Sweets</li></a>
-                    <a href=""><li>Chinese</li></a>
-                    <a href=""><li>Pasta</li></a>
-                </ul>
-            </div>
-
-            <div id="menu-list" class="menu-list">
-                    <ul style="border-bottom: black 1px solid; width: 25em;">
-                        <li>Food Name</li>
-                        <li>Quarter Price</li>
-                        <li>Half Price</li>
-                        <li>Full Price</li>
+                <div id="menu-options" class="menu-options">
+                    <ul style="font-size: 1.1em; list-style-type: none; display: flex;">
+                        <li>APPETIZERS |</li>
+                        <li>MEATS |</li>
+                        <li>VEGGIE |</li>
+                        <li>CHINESE |</li>
+                        <li>PASTA |</li>
+                        <li>SWEETS</li>
                     </ul>
+
+                    <div id="circle-options" style="margin-top: -1.4em;">
+                        <img src="images/gray-circle.png" height="6">
+                        <img src="images/black-circle.png" height="6">
+                        <img src="images/gray-circle.png" height="6">
+                        <img src="images/gray-circle.png" height="6">
+                        <img src="images/gray-circle.png" height="6">
+                        <img src="images/gray-circle.png" height="6">
+                    </div>
+                </div>
+
+                <div id="menu" class="menu">
+                    <div id="menu-list" class="menu-list">
+
+                    </div>
+                </div>
             </div>
-    </div>
-</body>
+
+            <div style="margin-top: 2em;">
+                <h1 style="margin-bottom: -.5em;">See What Our Customers Say!</h1>
+
+                <div class="comments">
+                    <h4>Thank you so much! <br> Everything was very tasty and everyone really enjoyed it!</h4>
+                    <h4>My family member tried your seekh kabab.  <br> They said they were very good! Do you offer those?</h4>
+                    <h4>Excellent Biryani!</h4>
+                    <h4>Salam, <br> Briyani and Chicken 65 were so yummy. Thank you!</h4>
+                    <h4>May God reward you with the best for the delicious food!</h4>
+                    <h4>Food was amazing and kids loved it!</h4>
+                    <h4>Food was absolutely delicious. All friends loved it & asked about your contact. <br> Food quantity was perfect too. <br> Thank you so much for the Delicious food.</h4>
+                    <h4>Alhamdulillah. We had your Korma and Hallem it was v good!</h4>
+                </div>
+            </div>
+
+            
+        </div>
+
+    </body>
 </html>

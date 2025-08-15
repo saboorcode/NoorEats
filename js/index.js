@@ -14,33 +14,64 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         for (let i = 0; i < menu.length; i++){
-            const row = document.createElement("ul")
+            if (menu[i].type == "chicken" || menu[i].type == "beef" || menu[i].type == "goat"){
+                const row = document.createElement("ul")
 
-            let li = document.createElement("li")
-            li.textContent = menu[i].dish
+                let li = document.createElement("li")
+                li.textContent = menu[i].dish
 
-            row.appendChild(li)
+                row.appendChild(li)
 
-            li = document.createElement("li")
-            li.textContent = menu[i].quarter_price
+                li = document.createElement("li")
+                li.textContent = 
+                    (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
+                    (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
+                    (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
 
-            row.appendChild(li)
 
-            li = document.createElement("li")
-            li.textContent = menu[i].half_price
+                row.appendChild(li)
 
-            row.appendChild(li)
-
-            li = document.createElement("li")
-            li.textContent = menu[i].full_price
-
-            row.appendChild(li)
-
-            menuList.appendChild(row)
+                menuList.appendChild(row)
+            }
         }
-
     }
 
     getMenu()
-          
+
+    const menuOpenButton = document.getElementById("menu-open-button")
+    const menuCloseButton = document.getElementById("menu-close-button")
+
+    let navbar = document.getElementById("navbar");
+    let navbarMobile = document.getElementById("navbar-mobile");
+    let hamburgerMenu = document.getElementById("hamburger-menu");
+
+    
+    // Add an event listener to call the function whenever the window is resized
+    // This fixes annoying duplicated navbar (desktop and mobile) due to eventListener conflicts for hamburger menu display
+    // 1. Hamburger Menu will always close when window resizes
+    // 2. This will always ensure one navbar remains
+    window.addEventListener('resize', (e) => {
+        hamburgerMenu.style.display = "none";
+
+        if (window.innerWidth >= 768){
+            navbarMobile.style.display = "none";
+        }
+
+        if (window.innerWidth < 768){
+            navbarMobile.style.display = "flex";
+        }
+    });
+    
+
+    menuOpenButton.addEventListener("click", (e) => {
+        hamburgerMenu.style.display = "block";
+        navbarMobile.style.display = "none";
+    })
+
+    menuCloseButton.addEventListener("click", (e) => {
+        hamburgerMenu.style.display = "none";
+        navbarMobile.style.display = "flex";
+    })
+
+
 })

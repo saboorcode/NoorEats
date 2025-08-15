@@ -1,38 +1,248 @@
 body {
     margin: 0;
     text-align: center;
+    font-family: "Hammersmith One", sans-serif;
 }
 
-#menu-section {
-    text-align: center;
-    border: black 1px solid
+.navbar, .navbar-mobile {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 0 1em;
+    background-color: black;
+    color: white;
 }
 
-#menu-option {
-        display: flex;
-        justify-content: center; /* Centers horizontally */
-        align-items: center;    /* Centers vertically */
+.navbar-mobile img {
+    padding: .3em;
 }
 
-.menu-option li {
+.navbar h1 {
+    padding-left: .5em;
+}
+
+.navbar-links ul {
+    list-style: none;
+    display: flex;
+    padding: 1em 1em 0 0;
+}
+
+.navbar-links li {
+    padding-right: 1.5em;
+}
+
+.contact-link {
+    background-color: white;
+    color: black;
+    padding: .5em .5em .5em 1em;
+    margin-top: -.5em;
+}
+
+.hamburger-menu {
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+.top-menu {
+    border-bottom: white 2px solid;
+    text-align: left;
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-bottom: 2em;
+}
+
+.top-menu button {
+    margin-top: .3em;
+    color: white;
+    background-color: black;
+    font-size: 2em;
+    border-style: none;
+    margin-right: .8em;
+}
+
+.menu-open-button {
+    background-color: black;
+    border-style: none;
+}
+
+.hamburger-menu ul {
+    list-style: none;
     padding-right: 2em;
 }
 
-.menu-option a {
-    text-decoration: none;
-    color: black;
+.hamburger-menu li {
+    padding-bottom: 3em;
 }
 
-.menu-option {
+.hamburger-menu li:nth-child(4) {
+    font-size: 50px;
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.hero {
+    display: flex;
+    padding: 0 15em 0 15em;
+    justify-content: center;
+    margin-left: -5em;
+}
+
+.hero div:nth-child(2) {
+    text-align: left;
+    margin-left: -5em;
+    margin-top: 5em;
+}
+
+.hero div:nth-child(2) h1:nth-child(2) {
+    font-size: 65px;
+  font-family: "Hurricane", cursive;
+  font-weight: 400;
+  font-style: normal;
+    margin-top: -.2em;
+    margin-bottom: -.1em;
+}
+
+.hero div:nth-child(2) p {
+    font-size: 13px;
+}
+
+.hero div:nth-child(2) ul {
+    margin-top: -.1em;
+    margin-left: -.6em;
+    font-size: 1.8em;
+}
+
+.hero div:nth-child(2) li {
+    padding-bottom: .2em;
+}
+
+.hero-nooreats {
+    display: flex;
+
+}
+
+.hero-nooreats img {
+    margin-top: 1.2em;
+    margin-left: -.7em;
+    height: 2.5em;
+}
+
+.menu-options ul {
+    justify-content: center;
+    margin-top: -1em;
+}
+
+.menu-options li {
+    padding-right: .3em;
+}
+
+.menu ul {
     list-style-type: none;
     display: flex;
+    justify-content: center;
+}
+
+.menu li:nth-child(1) {
+    margin-right: 15em;
+}
+
+.menu ul li:nth-child(2){
+    color: #FF8635;
+}
+
+.menu-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .menu-list ul {
-    display: flex;
+    flex: 0 0 50%; /* two columns */
+    box-sizing: border-box;
 }
 
-.menu-list li {
-    list-style-type: none;
-    margin-right: 2em;
+.foods-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15em 0 20em;
+}
+
+.foods-gallery img {
+    flex: 0 0 50%; /* two columns */
+    box-sizing: border-box;
+    padding: 1em;
+    height: 20em;
+    width: 20em;
+    margin-top: -1.5em;
+}
+
+.foods-gallery h4 {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    width: 10em;
+    margin-left: 4em;
+}
+
+.comments {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+    justify-content: center;
+}
+
+.comments h4 {
+    background-color: #E9E9EB;
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 1.5em;
+    margin: .5em;
+    width: fit-content;
+    border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+
+    .hero {
+        display: block;
+        padding: 0;
+    }
+
+    .california {
+        display: none;
+    }
+
+    .menu-list {
+        display: block;
+        padding: 0;
+        font-size: 16px;
+    }
+
+    .menu-list li:nth-child(2) {
+        margin-left: -12em;
+    }
+
+    .menu-options {
+        font-size: 10px;
+        padding: 0;
+    }
+
+    .hero div:nth-child(2) {
+        margin-left: 15em;  
+        font-size: 10px;
+        margin-bottom: 9em;
+    }
+
+    .foods-gallery {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-mobile {
+        display: none;
+    }
 }
