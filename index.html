@@ -28,10 +28,10 @@
 
                 <div class="navbar-links">
                     <ul>
-                        <li>HOME</li>
-                        <li>MENU</li>
-                        <li>ABOUT</li>
-                        <li class="contact-link">CONTACT</li>
+                        <a href="#hero"><li>HOME</li></a>
+                        <a href="#menu"><li>MENU</li></a>
+                        <a href="#about"><li>ABOUT</li></a>
+                        <a href="#footer"><li class="contact-link">CONTACT</li></a>
                     </ul>
                 </div>
                 
@@ -56,17 +56,33 @@
 
                 <div>
                     <ul>
-                        <li>HOME</li>
-                        <li>MENU</li>
-                        <li>ABOUT</li>
+                        <a href="#hero"><li>HOME</li></a>
+                        <a href="#menu"><li>MENU</li></a>
+                        <a href="#about"><li>ABOUT</li></a>
+                        <a href="#footer"><li class="contact-link" style="padding: 1em; margin-bottom: 1em;">CONTACT</li></a>
                         <li>Proudly Serving People <br> Of Central Valley</li>
                     </ul>
                 </div>
             </div>
 
-            <div class="hero">
+
+            <!--
+                <div style="margin-top: 5em;">
+                    <iframe width="1200" height="600"
+                        src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>   
+            -->
+
+            <!--
+            <video controls="controls" width="800" height="600" name="Video Name">
+                <source src="images/cooking_video.MOV">
+            </video>
+            -->
+
+            <div id="hero" class="hero">
                 <div>
-                    <img src="images/california.png" height="800em" style="margin-top: -3em" class="california">
+                    <img src="images/cook-logo.png" height="600em" style="margin-top: 1em; margin-right: -2em;;" class="california">
                 </div>
 
                 <div>
@@ -82,6 +98,7 @@
                         <li>Served <span style="color: #FF8635">2000+</span> Happy Customers</li>
                         <li>Catered for Events of <span style="color: #FF8635">50-150 people</span></li>
                         <li>Pick-Up or Delivery Available</li>
+                        <li><span style="color: #FF8635">10+</span> Years Experience</li>
                         <li>Hot, Fresh, and Authentic Indian/Pakistani <br> Cuisine</li>
                     </ul>
                 </div>
@@ -89,10 +106,48 @@
                 
             </div>
 
-            <div style="margin-top: -5em;">
+
+
+            <div id="menu" class="menu">
+                <h1>Menu</h1>
+
+                <div id="menu-options" class="menu-options">
+                    <ul style="font-size: 1.1em; list-style-type: none; display: flex;">
+                        <li id="click-appetizer">APPETIZERS</li>
+                        <li id="click-meats">MEATS</li>
+                        <li id="click-veggie">VEGGIE</li>
+                        <li id="click-chinese">CHINESE</li>
+                        <li id="click-pasta">PASTA</li>
+                        <li id="click-sweets">SWEETS</li>
+                    </ul>
+
+                    <div id="circle-options" class="circle-options" style="margin-top: -1.4em;">
+
+                    </div>
+                </div>
+
+                <div>
+                    <div id="menu-list" class="menu-list">
+
+                    </div>
+                </div>
+            </div>
+
+                        <div class="frequently-gallery" style="height: 100vh;">
                 <h1>Frequently Ordered Foods</h1>
 
                 <div class="foods-gallery">
+                    <div>
+                        <h4>Biryani</h4>
+                        <img src="images/briyani.jpg">
+                    </div>
+
+                    <div>
+                        <h4>Seekh Kabab</h4>
+                        <img src="images/seekh-kabab.jpg">
+                        <div>test</div>
+                    </div>
+
                     <div>
                         <h4>Chicken Sandwiches</h4>
                         <img src="images/chicken-sandwiches.jpg">
@@ -122,50 +177,10 @@
                         <h4>Zarda Rice</h4>
                         <img src="images/sweets/zarda-rice.jpg">
                     </div>
-
-                    <div>
-                        <h4>Peanut Chicken</h4>
-                        <img src="images/peanut-chicken.jpg">
-                    </div>
-
-                    <div>
-                        <h4>Chicken Manchurian</h4>
-                        <img src="images/chicken-manchurian.jpg">
-                    </div>
                 </div>
             </div>
 
             <div>
-                <h1>Menu</h1>
-
-                <div id="menu-options" class="menu-options">
-                    <ul style="font-size: 1.1em; list-style-type: none; display: flex;">
-                        <li>APPETIZERS |</li>
-                        <li>MEATS |</li>
-                        <li>VEGGIE |</li>
-                        <li>CHINESE |</li>
-                        <li>PASTA |</li>
-                        <li>SWEETS</li>
-                    </ul>
-
-                    <div id="circle-options" style="margin-top: -1.4em;">
-                        <img src="images/gray-circle.png" height="6">
-                        <img src="images/black-circle.png" height="6">
-                        <img src="images/gray-circle.png" height="6">
-                        <img src="images/gray-circle.png" height="6">
-                        <img src="images/gray-circle.png" height="6">
-                        <img src="images/gray-circle.png" height="6">
-                    </div>
-                </div>
-
-                <div id="menu" class="menu">
-                    <div id="menu-list" class="menu-list">
-
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top: 2em;">
                 <h1 style="margin-bottom: -.5em;">See What Our Customers Say!</h1>
 
                 <div class="comments">
@@ -178,6 +193,35 @@
                     <h4>Food was absolutely delicious. All friends loved it & asked about your contact. <br> Food quantity was perfect too. <br> Thank you so much for the Delicious food.</h4>
                     <h4>Alhamdulillah. We had your Korma and Hallem it was v good!</h4>
                 </div>
+            </div>
+
+            <div id="footer" class="footer">
+                <div style="margin-right: 25em;">
+                    <h1>NoorEats</h1>
+                    <h4>NoorEats@gmail.com</h4>
+                </div>
+
+                <div style="margin-right: 20em;">
+                    <h4 style="text-decoration: underline;">QUICK LINKS</h4>
+
+                    <div class="quick-links">
+                        <div style="margin-right: 5em;">
+                            <p>MENU PRICING</p>
+                            <p>FEEDBACK</p>
+                        </div>
+
+                        <div>
+                            <p>CUSTOMER SUPPORT</p>
+                            <p>BUSINESS/CHEF BIO</p>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="footer-serving">
+                    <h1>Serving People <br> of Central Valley</h1>
+                </div>
+                
             </div>
 
             

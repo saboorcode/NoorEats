@@ -6,7 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const menuList = document.getElementById("menu-list")
     
-    async function getMenu() {
+    async function getMenu(foodType) {
+        menuList.replaceChildren()
+
+        const loadingImage = document.createElement("img")
+        loadingImage.src = "../images/loading.png"
+        loadingImage.height = "100"
+        loadingImage.style.marginTop = "2em"
+
+        if (menuList.childNodes[0] == undefined){
+            menuList.appendChild(loadingImage)
+        }
         
         let { data: menu, error } = await supa
             .from('menu')
@@ -14,29 +24,61 @@ document.addEventListener('DOMContentLoaded', () => {
         
 
         for (let i = 0; i < menu.length; i++){
-            if (menu[i].type == "chicken" || menu[i].type == "beef" || menu[i].type == "goat"){
-                const row = document.createElement("ul")
+            if (foodType == "meats"){
 
-                let li = document.createElement("li")
-                li.textContent = menu[i].dish
+                console.log("meats pass")
+                if (menu[i].type == "chicken" || menu[i].type == "beef" || menu[i].type == "goat"){
+                    const row = document.createElement("ul")
 
-                row.appendChild(li)
+                    let li = document.createElement("li")
+                    li.textContent = menu[i].dish
 
-                li = document.createElement("li")
-                li.textContent = 
-                    (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
-                    (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
-                    (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
+                    row.appendChild(li)
+
+                    li = document.createElement("li")
+                    li.textContent = 
+                        (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
+                        (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
+                        (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
 
 
-                row.appendChild(li)
+                    row.appendChild(li)
 
-                menuList.appendChild(row)
+                    loadingImage.src = ""
+                    menuList.appendChild(row)
+                }
+            }
+
+            if (foodType != "meats"){
+                console.log("not meats pass")
+
+                if (menu[i].type == foodType){
+                    const row = document.createElement("ul")
+
+                    let li = document.createElement("li")
+                    li.textContent = menu[i].dish
+
+                    row.appendChild(li)
+
+                    li = document.createElement("li")
+                    li.textContent = 
+                        (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
+                        (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
+                        (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
+
+
+                    row.appendChild(li)
+
+                    loadingImage.src = ""
+                    menuList.appendChild(row)
+                }
             }
         }
+
+        console.log(menuList.childNodes[0] == undefined)
     }
 
-    getMenu()
+    getMenu("meats")
 
     const menuOpenButton = document.getElementById("menu-open-button")
     const menuCloseButton = document.getElementById("menu-close-button")
@@ -72,6 +114,151 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerMenu.style.display = "none";
         navbarMobile.style.display = "flex";
     })
+
+    const appetizerClick = document.getElementById("click-appetizer");
+    const meatsClick = document.getElementById("click-meats");
+    const veggieClick = document.getElementById("click-veggie");
+    const chineseClick = document.getElementById("click-chinese");
+    const pastaClick = document.getElementById("click-pasta");
+    const sweetsClick = document.getElementById("click-sweets");
+
+    const circleImage = document.getElementById("circle-options")
+
+    // default selection circle order for meats type
+    for (let i = 1; i <= 6; i++){
+        const grayCircle = document.createElement("img")
+        grayCircle.src = "../images/gray-circle.png"
+
+        const blackCircle = document.createElement("img")
+        blackCircle.src = "../images/black-circle.png"
+
+        if (i == 2){
+            circleImage.appendChild(blackCircle)
+        } else {
+            circleImage.appendChild(grayCircle)
+        }
+    }
+
+    console.log(circleImage)
+    appetizerClick.addEventListener('click', (e) => {
+        getMenu("appetizers")
+
+        circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 1){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
+
+        meatsClick.addEventListener('click', (e) => {
+        getMenu("meats")
+
+                circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 2){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
+
+        veggieClick.addEventListener('click', (e) => {
+         getMenu("veggie")
+
+                 circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 3){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
+
+        chineseClick.addEventListener('click', (e) => {
+        getMenu("chinese")
+
+                circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 4){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
+
+        pastaClick.addEventListener('click', (e) => {
+        getMenu("pasta")
+
+                circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 5){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
+
+        sweetsClick.addEventListener('click', (e) => {
+        getMenu("sweets")
+
+                circleImage.replaceChildren()
+
+        for (let i = 1; i <= 6; i++){
+            const grayCircle = document.createElement("img")
+            grayCircle.src = "../images/gray-circle.png"
+
+            const blackCircle = document.createElement("img")
+            blackCircle.src = "../images/black-circle.png"
+
+            if (i == 6){
+                circleImage.appendChild(blackCircle)
+            } else {
+                circleImage.appendChild(grayCircle)
+            }
+        }
+        })
 
 
 })
