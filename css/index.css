@@ -7,15 +7,14 @@ body {
 
 a { 
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .navbar, .navbar-mobile {
     display: flex;
     justify-content: space-between;
     padding: 0 1em 0 1em;
-    background-color: black;
-    color: white;
+    background-color: white;
 }
 
 .navbar-mobile img {
@@ -37,15 +36,13 @@ a {
 }
 
 .contact-link {
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
     padding: .5em .5em .5em 1em;
     margin-top: -.5em;
 }
 
 .hamburger-menu {
-    background-color: black;
-    color: white;
     display: none;
 }
 
@@ -59,16 +56,14 @@ a {
 
 .top-menu button {
     margin-top: .3em;
-    color: white;
-    background-color: black;
     font-size: 2em;
     border-style: none;
     margin-right: .8em;
 }
 
 .menu-open-button {
-    background-color: black;
     border-style: none;
+    background-color: white;
 }
 
 .hamburger-menu ul {
@@ -87,19 +82,36 @@ a {
   font-style: normal;
 }
 
+.rangehood {
+    background-image: url("../images/socialsight.png");
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.rangehood div {
+    color: white;
+}
+
+.rangehood div h1 {
+    padding-top: 5em;
+}
+
 .hero {
     display: flex;
-    padding: 0 10em 3em 10em;
     justify-content: center;
-    margin-left: 0;
-    margin-bottom: 9em;
-    padding-top: 6em;
+    margin-top: 7em;
+    height: 80vh;
+}
+
+.hero-image {
+    height: 40em;
+    margin-right: 0em;
 }
 
 .hero div:nth-child(2) {
     text-align: left;
     margin-left: 3em;
-    margin-top: 5em;
 }
 
 .hero div:nth-child(2) h1:nth-child(2) {
@@ -141,6 +153,9 @@ a {
     margin-right: .5em;
 }
 
+.menu {
+    background-color: rgb(255, 255, 255);
+}
 
 .menu-options ul {
     justify-content: center;
@@ -152,7 +167,7 @@ a {
 }
 
 .menu-list li:nth-child(1) {
-    margin-right: 6em;
+    margin-right: 4em;
     margin-left: -2.3em;
 }
 
@@ -161,41 +176,22 @@ a {
 }
 
 .menu-list {
-    justify-content: center;
+    columns: 2;
 }
 
 .menu-list ul {
     list-style-type: none;
-    display: flex;
+    /*display: flex;*/
+    column-count: 2;
     font-size: 18px;
     border-bottom: 2px grey solid;
     width: fit-content;
 }
 
-
-.foods-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0 5em 0 5em;
-}
-
 .foods-gallery img {
-    flex: 0 0 50%; /* two columns */
-    box-sizing: border-box;
-    padding: 1em;
     height: 20em;
     width: 20em;
-    margin-top: -1.5em;
-}
-
-.foods-gallery h4 {
-    background-color: black;
-    color: white;
-    padding: 1em;
-    width: 10em;
-    margin-left: 4em;
-    border-radius: .5em;
+    border-radius: 2em;
 }
 
 .comments {
@@ -249,10 +245,6 @@ a {
         padding: 0;
     }
 
-    .california {
-        display: none;
-    }
-
     .menu-list {
         display: block;
         padding: 0;
@@ -274,9 +266,6 @@ a {
         margin-bottom: 9em;
     }
 
-    .frequently-gallery {
-        display: none;
-    }
 }
 
 @media (min-width: 768px) {
