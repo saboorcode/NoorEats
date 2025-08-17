@@ -5,16 +5,16 @@ body {
     /*cursor: url("../images/jamun.png"), pointer;*/
 }
 
-a { 
+a {
     text-decoration: none;
     color: black;
 }
 
-.navbar, .navbar-mobile {
+.navbar,
+.navbar-mobile {
     display: flex;
     justify-content: space-between;
     padding: 0 1em 0 1em;
-    background-color: white;
 }
 
 .navbar-mobile img {
@@ -77,9 +77,9 @@ a {
 
 .hamburger-menu li:nth-child(4) {
     font-size: 50px;
-  font-family: "Hurricane", cursive;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Hurricane", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .rangehood {
@@ -87,10 +87,6 @@ a {
     background-size: 100vw 100vh;
     background-attachment: fixed;
     height: 100vh;
-}
-
-.rangehood div {
-    color: white;
 }
 
 .rangehood div h1 {
@@ -153,10 +149,6 @@ a {
     margin-right: .5em;
 }
 
-.menu {
-    background-color: rgb(255, 255, 255);
-}
-
 .menu-options ul {
     justify-content: center;
     margin-top: -1em;
@@ -171,7 +163,7 @@ a {
     margin-left: -2.3em;
 }
 
-.menu-list li:nth-child(2){
+.menu-list li:nth-child(2) {
     color: #FF8635;
 }
 
@@ -236,6 +228,7 @@ a {
     .footer {
         display: block;
     }
+
     .navbar {
         display: none;
     }
@@ -261,7 +254,7 @@ a {
     }
 
     .hero div:nth-child(2) {
-        margin-left: 15em;  
+        margin-left: 15em;
         font-size: 10px;
         margin-bottom: 9em;
     }
