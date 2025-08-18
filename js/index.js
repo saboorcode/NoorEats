@@ -5,7 +5,7 @@ const supa = supabase.createClient('https:/tkmampaeiyfxilwhlobc.supabase.co', 'e
 document.addEventListener('DOMContentLoaded', () => {
 
     const menuList = document.getElementById("menu-list")
-    
+
     async function getMenu(foodType) {
         menuList.replaceChildren()
 
@@ -14,20 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
         loadingImage.height = "100"
         loadingImage.style.marginTop = "2em"
 
-        if (menuList.childNodes[0] == undefined){
+        if (menuList.childNodes[0] == undefined) {
             menuList.appendChild(loadingImage)
         }
-        
+
         let { data: menu, error } = await supa
             .from('menu')
             .select('*')
-        
 
-        for (let i = 0; i < menu.length; i++){
-            if (foodType == "meats"){
+
+        for (let i = 0; i < menu.length; i++) {
+            if (foodType == "meats") {
 
                 console.log("meats pass")
-                if (menu[i].type == "chicken" || menu[i].type == "beef" || menu[i].type == "goat"){
+                if (menu[i].type == "chicken" || menu[i].type == "beef" || menu[i].type == "goat") {
                     const row = document.createElement("ul")
 
                     let li = document.createElement("li")
@@ -36,10 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     row.appendChild(li)
 
                     li = document.createElement("li")
-                    li.textContent = 
+                    li.textContent =
                         (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
-                        (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
-                        (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
+                        (menu[i].half_price != null ? "$" + menu[i].half_price : "$--") + " " +
+                        (menu[i].full_price != null ? "$" + menu[i].full_price : "$--");
 
 
                     row.appendChild(li)
@@ -49,10 +49,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
 
-            if (foodType != "meats"){
+            if (foodType != "meats") {
                 console.log("not meats pass")
 
-                if (menu[i].type == foodType){
+                if (menu[i].type == foodType) {
                     const row = document.createElement("ul")
 
                     let li = document.createElement("li")
@@ -61,10 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     row.appendChild(li)
 
                     li = document.createElement("li")
-                    li.textContent = 
+                    li.textContent =
                         (menu[i].quarter_price != null ? "$" + menu[i].quarter_price : "$--") + " " +
-                        (menu[i].half_price    != null ? "$" + menu[i].half_price    : "$--") + " " +
-                        (menu[i].full_price    != null ? "$" + menu[i].full_price    : "$--");
+                        (menu[i].half_price != null ? "$" + menu[i].half_price : "$--") + " " +
+                        (menu[i].full_price != null ? "$" + menu[i].full_price : "$--");
 
 
                     row.appendChild(li)
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let navbarMobile = document.getElementById("navbar-mobile");
     let hamburgerMenu = document.getElementById("hamburger-menu");
 
-    
+
     // Add an event listener to call the function whenever the window is resized
     // This fixes annoying duplicated navbar (desktop and mobile) due to eventListener conflicts for hamburger menu display
     // 1. Hamburger Menu will always close when window resizes
@@ -95,15 +95,15 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', (e) => {
         hamburgerMenu.style.display = "none";
 
-        if (window.innerWidth >= 768){
+        if (window.innerWidth >= 768) {
             navbarMobile.style.display = "none";
         }
 
-        if (window.innerWidth < 768){
+        if (window.innerWidth < 768) {
             navbarMobile.style.display = "flex";
         }
     });
-    
+
 
     menuOpenButton.addEventListener("click", (e) => {
         hamburgerMenu.style.display = "block";
@@ -125,14 +125,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const circleImage = document.getElementById("circle-options")
 
     // default selection circle order for meats type
-    for (let i = 1; i <= 6; i++){
+    for (let i = 1; i <= 6; i++) {
         const grayCircle = document.createElement("img")
         grayCircle.src = "../images/gray-circle.png"
 
         const blackCircle = document.createElement("img")
         blackCircle.src = "../images/black-circle.png"
 
-        if (i == 2){
+        if (i == 2) {
             circleImage.appendChild(blackCircle)
         } else {
             circleImage.appendChild(grayCircle)
@@ -145,120 +145,120 @@ document.addEventListener('DOMContentLoaded', () => {
 
         circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 1){
+            if (i == 1) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
-        meatsClick.addEventListener('click', (e) => {
+    meatsClick.addEventListener('click', (e) => {
         getMenu("meats")
 
-                circleImage.replaceChildren()
+        circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 2){
+            if (i == 2) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
-        veggieClick.addEventListener('click', (e) => {
-         getMenu("veggie")
+    veggieClick.addEventListener('click', (e) => {
+        getMenu("veggie")
 
-                 circleImage.replaceChildren()
+        circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 3){
+            if (i == 3) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
-        chineseClick.addEventListener('click', (e) => {
+    chineseClick.addEventListener('click', (e) => {
         getMenu("chinese")
 
-                circleImage.replaceChildren()
+        circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 4){
+            if (i == 4) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
-        pastaClick.addEventListener('click', (e) => {
+    pastaClick.addEventListener('click', (e) => {
         getMenu("pasta")
 
-                circleImage.replaceChildren()
+        circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 5){
+            if (i == 5) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
-        sweetsClick.addEventListener('click', (e) => {
+    sweetsClick.addEventListener('click', (e) => {
         getMenu("sweets")
 
-                circleImage.replaceChildren()
+        circleImage.replaceChildren()
 
-        for (let i = 1; i <= 6; i++){
+        for (let i = 1; i <= 6; i++) {
             const grayCircle = document.createElement("img")
             grayCircle.src = "../images/gray-circle.png"
 
             const blackCircle = document.createElement("img")
             blackCircle.src = "../images/black-circle.png"
 
-            if (i == 6){
+            if (i == 6) {
                 circleImage.appendChild(blackCircle)
             } else {
                 circleImage.appendChild(grayCircle)
             }
         }
-        })
+    })
 
 
 })
