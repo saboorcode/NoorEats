@@ -3,6 +3,7 @@ body {
     text-align: center;
     font-family: "Hammersmith One", sans-serif;
     /*cursor: url("../images/jamun.png"), pointer;*/
+    overflow-x: hidden;
 }
 
 a {
@@ -83,10 +84,10 @@ a {
 }
 
 .rangehood {
-    background-image: url("../images/socialsight.png");
-    background-size: 100vw 100vh;
+    background-image: url("../desktop/images/socialsight.png");
+    background-size: 100dvw 100dvh;
     background-attachment: fixed;
-    height: 100vh;
+    height: 100dvh;
 }
 
 .rangehood div h1 {
@@ -135,7 +136,6 @@ a {
 
 .hero-nooreats {
     display: flex;
-
 }
 
 .hero-nooreats img {
@@ -205,23 +205,61 @@ a {
 }
 
 .footer {
-    display: flex;
-    margin-top: 3.5em;
     background-color: black;
     color: white;
-    height: 30em;
-    padding: 5em 7em 0 7em;
+    padding: 4em 0 5em 0;
 }
 
-.footer-serving h1 {
-    font-size: 50px;
-    font-family: "Hurricane", cursive;
-    font-weight: 400;
-    font-style: normal;
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20em;
+}
+
+.footer-1 {
+    margin-left: 8em;
+}
+
+.footer-2 {
+    margin-left: 15em;
+}
+
+.footer-3 {
+    margin-left: 15em;
+}
+
+.footer-topsection {
+    display: flex;
+}
+
+.footer-bottomsection {
+    display: flex;
+    justify-content: center;
+    border-top: 5px solid white;
+    width: 90dvw;
+    margin-left: 6rem;
+    margin-top: 2em;
+}
+
+.footer-bottomsection h4 {
+    margin-left: 52em;
+}
+
+.footer-bottomsection p {
+    margin-left: 32em;
 }
 
 .quick-links {
     display: flex;
+}
+
+.quick-links a {
+    margin-right: 4rem;
 }
 
 @media (max-width: 768px) {
