@@ -51,10 +51,6 @@ main {
     max-width: 1500px;
     padding: 5em;
     margin: 3em auto 5em auto;
-
-
-
-    display: none;
 }
 
 main img {
@@ -98,7 +94,6 @@ section.menu div {
     grid-template-columns: 1fr 1fr;
     border-bottom: 1px solid black;
     margin-bottom: 2em;
-
 }
 
 section.menu div p {
@@ -124,7 +119,7 @@ section.menu div p:nth-child(2) {
     color: black;
 }
 
-.menu-selection-btn button:hover {
+.menu-selection-btn .button-hover-style:hover {
     background: black;
     color: white;
 }
@@ -133,46 +128,94 @@ section.menu div p:nth-child(2) {
     background: grey;
 }
 
-.menu-selection-btn button:first-child {
+.menu-selection-btn button:nth-child(2) {
     background: black;
     color: white;
 }
 
+/* mosque section */
+section.mosque {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    position: relative;
+}
 
+section.mosque img {
+    height: 500px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 5px 5px 10px rgba(105, 105, 105, 0.5);
+}
 
+section.mosque p {
+    position: relative;
+}
 
+.img-bg {
+    position: relative;
+}
 
+section.mosque:before {
+    content: "";
+    position: absolute;
+    width: 78%;
+    height: 50%;
+    bottom: 5em;
+    left: -25%;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0 100px 0 0;
+    /* change 50 to a value that gets the shape right */
+}
 
+/* Reviews Section */
+section.customer-reviews {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+}
 
+.comments {
+    justify-self: end;
+}
 
+.comments h4 {
+    background-color: #2B99FB;
+    color: #F1FEFF;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 1em;
+    margin: .5em;
+    width: fit-content;
+    border-radius: 20px;
+    border-bottom-right-radius: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+section.customer-reviews:before {
+    content: "";
+    position: absolute;
+    width: 78%;
+    height: 50%;
+    bottom: 5em;
+    right: -15em;
+    background-color: rgb(114, 180, 255);
+    border-radius: 100px 100px 0 100px;
+    z-index: -1;
+    opacity: 25%;
+    /* change 50 to a value that gets the shape right */
+}
 
 /* food gallery masonry */
 .food-gallery-masonry {
     display: grid;
     grid-template-columns: repeat(13, 1fr);
     grid-template-rows: repeat(11, 1fr);
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     gap: 8px;
-
-    display: none;
-    /* remove this later */
 }
 
 .food-gallery-masonry img {
@@ -280,11 +323,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr .8fr;
     padding: 4em 7em 0 7em;
-
-
-
-    display: none;
-    /* remove this later */
+    margin-top: 10em;
 }
 
 footer a {

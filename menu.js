@@ -82,7 +82,7 @@ window.onload = () => {
     }
 
     function getMenuFunc(foodType) {
-        const getMenu = document.getElementById("menu");
+        const getMenu = document.getElementById("menu-table");
         const foodInfo = document.createElement('div');
 
         let foodPriceElement = document.createElement('p');
@@ -121,7 +121,7 @@ window.onload = () => {
         }
     }
 
-    getMenuFunc('sweets')
+    getMenuFunc('meats')
 
     const btnEl = document.getElementById('menu-selection-btn')
     btnEl.addEventListener("click", e => {
@@ -136,7 +136,7 @@ window.onload = () => {
 
             // Style the button to let user know button is clicked
             // Style unselected buttons in a toggle way
-            if (parentElement.children[i].id == btnId) {
+            if (parentElement.children[i].id == btnId && btnId != "menu-selection-btn") {
                 btn.style.background = 'black';
                 btn.style.color = 'white';
 
@@ -144,7 +144,7 @@ window.onload = () => {
 
                 //console.log(btn)
             }
-            if (parentElement.children[i].id != btnId) {
+            if (parentElement.children[i].id != btnId && btnId != "menu-selection-btn") {
                 let buttonNotSelected = parentElement.children[i];
                 buttonNotSelected.style.background = 'white';
                 buttonNotSelected.style.color = 'black';
@@ -174,6 +174,8 @@ window.onload = () => {
     // Mouseover = Hover
     // Mouseout = After Hover - Cursor on element to outside the target element
 
+
+    /*
     const btnHover = document.getElementById('menu-selection-btn')
     btnHover.addEventListener("mouseover", e => {
         let hoveredBtn = e.target;
@@ -204,5 +206,6 @@ window.onload = () => {
             
         }
     })
+    */
 
 }
