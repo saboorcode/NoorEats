@@ -6,7 +6,6 @@ body {
     padding: 0;
     font-family: "Poppins";
     background: #fafafa;
-    font-size: clamp(1rem, 0.5976rem + 0.1201vw, 3rem);
 }
 
 /* navbar */
@@ -80,7 +79,6 @@ main button:hover {
 
 /* menu */
 #menu {
-    height: 35em;
     background: rgb(240, 240, 240);
 }
 
@@ -164,6 +162,7 @@ section.mosque img {
     box-shadow: 5px 5px 10px rgba(105, 105, 105, 0.5);
 }
 
+/*
 section.mosque:before {
     content: "";
     position: absolute;
@@ -173,8 +172,8 @@ section.mosque:before {
     left: -25%;
     background-color: rgb(238, 238, 238);
     border-radius: 0 100px 0 0;
-    /* change 50 to a value that gets the shape right */
 }
+*/
 
 /* Reviews Section */
 section.customer-reviews {
@@ -312,9 +311,7 @@ footer a {
 }
 
 /* hide sections so I can focus on a section */
-.food-gallery-masonry,
-#gallery,
-footer, main, nav, #about {
+section.customer-reviews {
     display: none;
 }
 
@@ -327,10 +324,9 @@ footer, main, nav, #about {
 
 /* responsive screen */
 @media screen and (max-width: 1200px) {
-    section.mosque img, h1, p, button {
-        scale: .8;
+    section.mosque {
+        column-gap: 1em;
     }
-
     section.menu {
         grid-template-columns: 1fr 1fr;
     }
@@ -342,6 +338,7 @@ footer, main, nav, #about {
     }
 
     section.mosque img {
+        margin-top: 1em;
         grid-row: 2/3;
         justify-self: center;
     }
@@ -350,11 +347,58 @@ footer, main, nav, #about {
         display: block;
         text-align: center;
     }
+
+    .food-gallery-masonry {
+        gap: 5px;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .food-gallery-masonry {
+        columns: 4;
+        margin: 0 1em;
+    }
+
+    footer {
+        padding-right: 1em;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    section.menu {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        font-size: 1em;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    footer p:last-child {
+        grid-column: span 2;
+    }
+
+    .footer-links {
+        column-gap: 2em;
+    }
 }
 
 @media screen and (max-width: 680px) {
     main h1 {
         font-size: 1.5em;
+    }
+
+    .food-gallery-masonry {
+        columns: 3;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    section.mosque img {
+        width: 90dvw;
+        height: auto;
+        margin: 1em 0 0 0 0;
+        padding: 0;
     }
 }
 
@@ -365,6 +409,42 @@ footer, main, nav, #about {
 
     main p {
         font-size: 12px;
+    }
+
+    section.mosque h1, section.mosque p {
+        scale: .9;
+    }
+
+    section.mosque button {
+        margin-top: -4em;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #menu button {
+        font-size: .7em;
+        padding: 10px 2px;
+    }
+
+    #menu button:first-child {
+        padding-left: 4px;
+    }
+
+    #menu button:last-child {
+        padding-right: 4px;
+    }
+
+    .menu-selection-btn {
+        text-align: center;
+    }
+
+    #menu h1 {
+        font-size: 1.5em;
+    }
+
+    .food-gallery-masonry {
+        columns: 2;
+        margin: 0;
     }
 }
 
@@ -377,5 +457,18 @@ footer, main, nav, #about {
     nav h1 {
         margin-right: -13px;
         margin-left: -13px;
+    }
+
+    section.menu div p:last-child {
+        padding: 0 1em;
+    }
+
+    section.menu {
+        margin: 0 1em;
+    }
+
+    .footer-links {
+        grid-template-columns: 1fr;
+        justify-items: center;
     }
 }
