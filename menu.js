@@ -121,22 +121,17 @@ window.onload = () => {
         }
     }
 
-    getMenuFunc('meats')
-
-    const btnEl = document.getElementById('menu-selection-btn')
-    btnEl.addEventListener("click", e => {
-        const btn = e.target; // retrieve specific children element node for attribute/content access
-        const btnId = btn.id; // retrieve id of specific element node upon user's click
-        const parentElement = btn.parentElement; // retrieve parent element so I can style all other buttons in a toggle way
-
-        getMenuFunc(btnId)
+    function styleToggleButton(btnEvent){
+        const btn = btnEvent;
+        const parentElement = btn.parentElement;
+        const btnId = btn.id;
 
         for (let i = 0; i < parentElement.children.length; i++) {
             //console.log(parentElement.children[i])
 
             // Style the button to let user know button is clicked
             // Style unselected buttons in a toggle way
-            if (parentElement.children[i].id == btnId && btnId != "menu-selection-btn") {
+            if (parentElement.children[i].id == btnId) {
                 btn.style.background = 'black';
                 btn.style.color = 'white';
 
@@ -144,68 +139,58 @@ window.onload = () => {
 
                 //console.log(btn)
             }
-            if (parentElement.children[i].id != btnId && btnId != "menu-selection-btn") {
+            if (parentElement.children[i].id != btnId) {
                 let buttonNotSelected = parentElement.children[i];
                 buttonNotSelected.style.background = 'white';
                 buttonNotSelected.style.color = 'black';
 
                 buttonNotSelected.classList.remove('selected')
-
-                //console.log(buttonNotSelected)
             }
         }
+    }
+
+    const appetBtn = document.getElementById('appetizers')
+    const meatsBtn = document.getElementById('meats')
+    const veggieBtn = document.getElementById('veggie')
+    const chineseBtn = document.getElementById('chinese')
+    const pastaBtn = document.getElementById('pasta')
+    const sweetsBtn = document.getElementById('sweets')
+
+    appetBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
+
+        styleToggleButton(e.target)
     })
 
+    meatsBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
 
-
-    // Button Hover Style - Pseudo Classes are removed after the click function for some reason
-
-    /************************************
-       .menu-selection-btn button:hover {
-            background: black;
-            color: white;
-        }
-
-        .menu-selection-btn button:active {
-            background: grey;
-        }
-    ************************************ */
-
-    // Mouseover = Hover
-    // Mouseout = After Hover - Cursor on element to outside the target element
-
-
-    /*
-    const btnHover = document.getElementById('menu-selection-btn')
-    btnHover.addEventListener("mouseover", e => {
-        let hoveredBtn = e.target;
-
-        if (hoveredBtn.id == "menu-selection-btn") {
-            // do nothing
-            // we don't want to style the parent element - children element only
-        } else {
-            hoveredBtn.style.background = "black"
-            hoveredBtn.style.color = "white"
-        }
+        styleToggleButton(e.target)
     })
 
-    btnHover.addEventListener("mouseout", e => {
-        let hoveredBtn = e.target;
+    veggieBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
 
-        if (hoveredBtn.id == "menu-selection-btn") {
-            // do nothing
-        }
-
-        for (let i = 0; i < hoveredBtn.classList.length; i++) {
-            if (hoveredBtn.classList.value.includes("selected") || hoveredBtn.id == "menu-selection-btn") {
-                // do nothing - orignal style remains / button selected
-            } else {
-                hoveredBtn.style.background = "white"
-                hoveredBtn.style.color = "black"
-            }
-            
-        }
+        styleToggleButton(e.target)
     })
-    */
 
+    chineseBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
+
+        styleToggleButton(e.target)
+    })
+
+    pastaBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
+
+        styleToggleButton(e.target)
+    })
+
+    sweetsBtn.addEventListener('click', e => {
+        getMenuFunc(e.target.id)
+
+        styleToggleButton(e.target)
+    })
+
+    getMenuFunc('meats')
 }

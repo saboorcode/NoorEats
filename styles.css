@@ -120,15 +120,6 @@ section.menu div p:nth-child(2) {
     color: black;
 }
 
-.menu-selection-btn .button-hover-style:hover {
-    background: black;
-    color: white;
-}
-
-.menu-selection-btn button:active {
-    background: grey;
-}
-
 .menu-selection-btn button:nth-child(2) {
     background: black;
     color: white;
@@ -162,7 +153,6 @@ section.mosque img {
     box-shadow: 5px 5px 10px rgba(105, 105, 105, 0.5);
 }
 
-/*
 section.mosque:before {
     content: "";
     position: absolute;
@@ -173,17 +163,18 @@ section.mosque:before {
     background-color: rgb(238, 238, 238);
     border-radius: 0 100px 0 0;
 }
-*/
 
 /* Reviews Section */
 section.customer-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1300px;
+    max-width: 1500px;
     margin: 0 auto;
     position: relative;
-    margin-bottom: 15em;
+    margin-bottom: 5em;
+    margin-top: -5em;
     gap: 0;
+    padding: 0 1em;
 }
 
 section.customer-reviews:before {
@@ -192,7 +183,7 @@ section.customer-reviews:before {
     width: 78%;
     height: 50%;
     bottom: 5em;
-    right: -15%;
+    right: 0;
     background-color: rgb(114, 180, 255);
     border-radius: 100px;
     z-index: -1;
@@ -202,11 +193,8 @@ section.customer-reviews:before {
 
 .comments {
     display: grid;
-    grid-template-columns: repeat(12, 100px);
-    grid-template-rows: repeat(12, 50px);
-    justify-items: center;
-    max-width: 750px;
-    max-height: 500px;
+    grid-template-columns: 1fr;
+    padding-top: 5em;
 }
 
 .comments p {
@@ -216,54 +204,11 @@ section.customer-reviews:before {
     padding: 1em;
     height: fit-content;
     border-radius: 20px;
+    width: fit-content;
 }
 
-.comments p:nth-child(even) {
-    scale: 1.1;
-}
-
-.comments p:nth-child(odd) {
-    scale: .85;
-}
-
-.comments p:first-child {
-    grid-column: 1 / 6;
-    grid-row: 3 / 4;
-}
-
-.comments p:nth-child(2) {
-    grid-column: 2 / 7;
-    grid-row: 5 / 6;
-}
-
-.comments p:nth-child(3) {
-    grid-column: 6 / 8;
-    grid-row: 1 / 2;
-}
-
-.comments p:nth-child(4) {
-    grid-column: 7 / 10;
-    grid-row: 3 / 4;
-}
-
-.comments p:nth-child(5) {
-    grid-column: 6 / 11;
-    grid-row: 7 / 8;
-}
-
-.comments p:nth-child(6) {
-    grid-column: 5 / 10;
-    grid-row: 9 / 10;
-}
-
-.comments p:nth-child(7) {
-    grid-column: 2 / 9;
-    grid-row: 11 / 12;
-}
-
-.comments p:nth-child(8) {
-    grid-column: 1 / 4;
-    grid-row: 8 / 9;
+.comments p:nth-child(even){
+    justify-self: end;
 }
 
 /* gallery masonry */
@@ -271,6 +216,7 @@ section.customer-reviews:before {
     columns: 5;
     max-width: 1500px;
     margin: 0 auto;
+    padding: 0 .5em;
 }
 
 .food-gallery-masonry img {
@@ -287,9 +233,7 @@ footer {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    width: 100dvw;
 
-    overflow: hidden;
 
     margin-top: 5em;
 }
@@ -310,17 +254,7 @@ footer a {
     column-gap: 10em;
 }
 
-/* hide sections so I can focus on a section */
-section.customer-reviews {
-    display: none;
-}
-
 /* animation */
-@keyframes imageHover {
-    from {}
-
-    to {}
-}
 
 /* responsive screen */
 @media screen and (max-width: 1200px) {
@@ -330,11 +264,26 @@ section.customer-reviews {
     section.menu {
         grid-template-columns: 1fr 1fr;
     }
+
+    section.customer-reviews .comments {
+        margin-left: -3em;
+    }
 }
 
 @media screen and (max-width: 970px) {
     section.mosque {
         grid-template-columns: 1fr;
+    }
+
+    section.customer-reviews {
+        margin-top: -10em;
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+
+    section.customer-reviews .comments {
+        margin-top: -3em;
+        margin-left: 0;
     }
 
     section.mosque img {
@@ -400,6 +349,14 @@ section.customer-reviews {
         margin: 1em 0 0 0 0;
         padding: 0;
     }
+
+    section.customer-reviews .comments p {
+        font-size: 12px;
+    }
+
+    section.customer-reviews .comments {
+        margin-top: -3em;
+    }
 }
 
 @media screen and (max-width: 520px) {
@@ -423,7 +380,7 @@ section.customer-reviews {
 @media screen and (max-width: 450px) {
     #menu button {
         font-size: .7em;
-        padding: 10px 2px;
+        padding: 10px 4px;
     }
 
     #menu button:first-child {
@@ -446,17 +403,23 @@ section.customer-reviews {
         columns: 2;
         margin: 0;
     }
+
+    section.customer-reviews p {
+        font-size: 12px;
+    }
 }
 
 @media screen and (max-width: 420px) {
-    nav h1,
-    a {
-        scale: .8;
+    #menu button {
+        font-size: 10px;
     }
 
     nav h1 {
-        margin-right: -13px;
-        margin-left: -13px;
+        font-size: 1em;
+    }
+
+    nav a {
+        font-size: 12px;
     }
 
     section.menu div p:last-child {
@@ -470,5 +433,13 @@ section.customer-reviews {
     .footer-links {
         grid-template-columns: 1fr;
         justify-items: center;
+    }
+
+    section.customer-reviews .comments {
+        margin-top: -5em;
+    }
+
+    section.customer-reviews .comments p {
+        font-size: 9px;
     }
 }
