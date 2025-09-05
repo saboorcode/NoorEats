@@ -101,7 +101,7 @@ section.menu div p {
     margin: 0;
 }
 
-section.menu div p:nth-child(2) {
+section.menu div p:last-child {
     margin-left: 5rem;
 }
 
@@ -183,11 +183,10 @@ section.customer-reviews:before {
     width: 78%;
     height: 50%;
     bottom: 5em;
-    right: 0;
-    background-color: rgb(114, 180, 255);
     border-radius: 100px;
+    background-color: rgb(114, 180, 255);
     z-index: -1;
-    opacity: 25%;
+    opacity: 15%;
     /* change 50 to a value that gets the shape right */
 }
 

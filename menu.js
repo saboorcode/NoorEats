@@ -2,84 +2,91 @@ window.onload = () => {
     console.log('document is loaded');
 
 
-    const menu = { // price: [quarter, half, full]
-        meats:
-        {
-            item: [
-                { name: 'Chicken Biryani', price: [35, 70, 140] },
-                { name: 'Chicken Curry', price: [35, 70, 140] },
-                { name: 'Chicken Karhai', price: [35, 70, 140] },
-                { name: 'Butter Chicken', price: [35, 70, 140] },
-                { name: 'Chicken Haleem', price: [null, 70, 140] },
-                { name: 'Chicken Tandoori', price: [40, 80, 160] },
-                { name: 'Beef Biryani', price: [40, 80, 160] },
-                { name: 'Beef Curry', price: [40, 80, 160] },
-                { name: 'Dum Qeema', price: [45, 85, 170] },
-                { name: 'Aloo Qeema', price: [40, 80, 160] },
-                { name: 'Bihari Boti', price: [45, 80, 170] },
-                { name: 'Beef Haleem', price: [null, 80, 160] },
-                { name: 'Paya', price: [null, 85, 170] },
-                { name: 'Goat Biryani', price: [45, 85, 165] },
-                { name: 'Goat Curry', price: [45, 85, 165] },
-                { name: 'Goat Karhai', price: [45, 85, 165] },
-                { name: 'Lamb Aloo', price: [45, 85, 165] },
-                { name: 'Palak Gosht', price: [45, 85, 165] },
-                { name: 'Lamb Haleem', price: [null, 90, 175] }
-            ]
-        }
-        ,
-        appetizers:
-        {
-            item: [
-                { name: 'Zeera Rice', price: [15, 30, 60] },
-                { name: 'Garlic Naan', price: [12, 22, 40] }
-            ]
-        }
-        ,
-        veggie:
-        {
-            item: [
-                { name: 'Mix Veggie Pulao', price: [30, 55, 100] },
-                { name: 'Any Vegetable / Mix', price: [30, 60, 110] },
-                { name: 'Any Daal (Lentils)', price: [25, 50, 100] },
-                { name: 'Palak Paneer', price: [30, 60, 110] },
-                { name: 'Karri Pakora', price: [30, 60, 110] }
-            ]
-        }
-        ,
-        chinese:
-        {
-            item: [
-                { name: 'Chicken 65', price: [40, 80, 160] },
-                { name: 'Chicken Manchurian', price: [35, 70, 140] },
-                { name: 'Chinese Fried Rice', price: [35, 70, 140] },
-                { name: 'Chicken Chow Mein', price: [35, 70, 140] },
-                { name: 'Veggie Manchurian', price: [35, 70, 140] },
-                { name: 'Veggie Chow Mein', price: [35, 70, 140] },
-                { name: 'Veggie Fried Rice', price: [35, 70, 140] }
-            ]
-        }
-        ,
-        pasta:
-        {
-            item: [
-                { name: 'Veggie Pasta', price: [35, 70, 140] },
-                { name: 'Chicken Pasta', price: [35, 70, 140] },
-                { name: 'Beef Pasta', price: [35, 70, 140] }
-            ]
-        }
-        ,
-        sweets:
-        {
-            item: [
-                { name: 'Kheer (Rice Pudding)', price: [null, 70, 140] },
-                { name: 'Sheer Khurma', price: [null, 70, 140] },
-                { name: 'Fruit Trifle Custard', price: [null, 70, 140] },
-                { name: 'Shahi Tukrey', price: [null, 60, 120] },
-                { name: 'Shahi', price: [null, 60, 120] }
-            ]
-        }
+const menu = { // price: "quarter half full"
+    meats: {
+        item: [
+            { name: 'Chicken Biryani', price: "$30 $65 $130" },
+            { name: 'Chicken Curry', price: "$35 $65 $130" },
+            { name: 'Chicken Karhai', price: "$35 $70 $140" },
+            { name: 'Butter Chicken', price: "$35 $70 $140" },
+            { name: 'Chicken Quorma', price: "$35 $70 $140" },
+            { name: 'Chicken Haleem', price: "$35 $65 $135" },
+            { name: 'Chicken Tikka', price: "$5/Leg Quarter" },
+            { name: 'Chicken Tandoori', price: "$40 $80 $160" },
+            { name: 'Beef Biryani', price: "$40 $75 $150" },
+            { name: 'Bhuna Beef', price: "$40 $75 $150" },
+            { name: 'Dum Qeema', price: "$40 $75 $150" },
+            { name: 'Beef Curry', price: "$40 $80 $160" },
+            { name: 'Beef Haleem', price: "$35 $75 $150" },
+            { name: 'Dum Qeema', price: "$45 $85 $170" },
+            { name: 'Aloo Qeema', price: "$35 $70 $140" },
+            { name: 'Bihari Boti', price: "$45 $80 $170" },
+            { name: 'Paya', price: "$-- $85 $170" },
+            { name: 'Goat Biryani', price: "$55 $110 $220" },
+            { name: 'Goat Curry', price: "$45 $85 $165" },
+            { name: 'Goat Karhai', price: "$55 $110 $220" },
+            { name: 'Lamb Aloo', price: "$45 $85 $165" },
+            { name: 'Palak Gosht', price: "$55 $110 $220" },
+            { name: 'Lamb Haleem', price: "$-- $90 $175" }
+        ]
+    },
+    appetizers: {
+        item: [
+            { name: "Spring Roll Chicken", price: "$30/dozen"},
+            { name: "Spring Roll Veggie", price: "$24/dozen"},
+            { name: "Puff Chicken Patties", price: "$30/dozen"},
+            { name: "Puff Potato Patties", price: "$24/dozen"},
+            { name: "Pakora Mix Veggie", price: "$50 half-tray"},
+            { name: "Chana Chaat", price: "$50 half-tray"},
+            { name: "Fruit Chaat", price: "$50 half-tray"},
+            { name: "Seekh Beef Kababs", price: "$36/dozen"},
+            { name: "Seekh Chicken Kababs", price: "$36/dozen"},
+            { name: "Shami Beef Kababs", price: "$30/dozen"},
+            { name: "Shami Chicken Kababs", price: "$25/dozen"}
+            
+        ]
+    },
+    veggie: {
+        item: [
+            { name: 'Mix Veggie Pulao', price: "$30 $50 $100" },
+            { name: 'Any Vegetable / Mix', price: "$30 $50 $100" },
+            { name: 'Any Daal (Lentils)', price: "$30 $50 $100" },
+            { name: 'Palak Paneer', price: "$30 $60 $120" },
+            { name: 'Kadhi Pakora', price: "$30 $60 $100" },
+            { name: 'Karri Pakora', price: "$30 $60 $110" }
+        ]
+    },
+    chinese: {
+        item: [
+            { name: 'Chicken 65', price: "$35 $65 $140" },
+            { name: 'Orange Chicken', price: "$40 $60 $130" },
+            { name: 'Chicken Manchurian', price: "$35 $70 $140" },
+            { name: 'Chinese Fried Rice', price: "$30 $60 $120" },
+            { name: 'Chicken Chow Mein', price: "$35 $60 $120" },
+            { name: 'Veggie Manchurian', price: "$35 $70 $140" },
+            { name: 'Veggie Chow Mein', price: "$30 $60 $120" },
+            { name: 'Veggie Fried Rice', price: "$30 $60 $120" }
+        ]
+    },
+    pasta: {
+        item: [
+            { name: 'Veggie Pasta', price: "$35 $70 $140" },
+            { name: 'Chicken Pasta', price: "$35 $60 $120" },
+            { name: 'Chicken Alfredo', price: "$35 $60 $120" }
+        ]
+    },
+    sweets: {
+        item: [
+            { name: 'Kheer', price: "$35 $60 $120" },
+            { name: 'Sheer Khurma', price: "$30 $60 $120" },
+            { name: 'Fruit Trifle Custard', price: "$35 $65 $130" },
+            { name: 'Shahi Tukra', price: "$35 $65 $130" },
+            { name: 'Zarda', price: "$35 $65 $130" },
+            { name: 'Shahi', price: "$-- $60 $120" }
+        ]
     }
+}
+
 
     function getMenuFunc(foodType) {
         const getMenu = document.getElementById("menu-table");
@@ -105,11 +112,17 @@ window.onload = () => {
         for (let i = 0; i < itemArrLength; i++) {
             const foodName = items[i].name
 
+            const price = items[i].price
+
+            /*
             const quarter = items[i].price[0] ? items[i].price[0] : "--"
             const half = items[i].price[1]
             const full = items[i].price[2]
+            */
 
-            let foodPrice = `${'$' + quarter} ${'$' + half} ${'$' + full}`
+            //let foodPrice = `${'$' + quarter} ${'$' + half} ${'$' + full}`
+
+            let foodPrice = price;
 
             foodNameElement.textContent = foodName
             foodPriceElement.textContent = foodPrice
