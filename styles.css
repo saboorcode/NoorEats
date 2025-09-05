@@ -169,12 +169,12 @@ section.mosque:before {
 section.customer-reviews {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1500px;
+    max-width: 1300px;
     margin: 0 auto;
     position: relative;
     margin-bottom: 5em;
     margin-top: -5em;
-    gap: 0;
+    column-gap: 1em;
     padding: 0 1em;
 }
 
