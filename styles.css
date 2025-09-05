@@ -151,6 +151,7 @@ section.mosque img {
     position: relative;
     z-index: 1;
     box-shadow: 5px 5px 10px rgba(105, 105, 105, 0.5);
+    justify-self: center;
 }
 
 section.mosque:before {
@@ -160,6 +161,7 @@ section.mosque:before {
     height: 50%;
     bottom: 5em;
     left: -25%;
+    z-index: -1;
     background-color: rgb(238, 238, 238);
     border-radius: 0 100px 0 0;
 }
@@ -262,10 +264,6 @@ footer a {
     }
     section.menu {
         grid-template-columns: 1fr 1fr;
-    }
-
-    section.customer-reviews .comments {
-        margin-left: -3em;
     }
 }
 
