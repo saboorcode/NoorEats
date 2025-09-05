@@ -311,6 +311,10 @@ footer a {
 }
 
 @media screen and (max-width: 770px) {
+    main {
+    background: linear-gradient(rgba(0, 0, 0, 0.473)), url('assets/img/hero-mobile.jpg') no-repeat center / cover;
+    }
+
     section.menu {
         grid-template-columns: 1fr;
     }
