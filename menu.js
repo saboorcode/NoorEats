@@ -18,16 +18,12 @@ const menu = { // price: "quarter half full"
             { name: 'Dum Qeema', price: "$40 $75 $150" },
             { name: 'Beef Curry', price: "$40 $80 $160" },
             { name: 'Beef Haleem', price: "$35 $75 $150" },
-            { name: 'Dum Qeema', price: "$45 $85 $170" },
             { name: 'Aloo Qeema', price: "$35 $70 $140" },
             { name: 'Bihari Boti', price: "$45 $80 $170" },
-            { name: 'Paya', price: "$-- $85 $170" },
+            { name: 'Paya', price: "$-- $75 $150" },
             { name: 'Goat Biryani', price: "$55 $110 $220" },
-            { name: 'Goat Curry', price: "$45 $85 $165" },
             { name: 'Goat Karhai', price: "$55 $110 $220" },
-            { name: 'Lamb Aloo', price: "$45 $85 $165" },
-            { name: 'Palak Gosht', price: "$55 $110 $220" },
-            { name: 'Lamb Haleem', price: "$-- $90 $175" }
+            { name: 'Palak Gosht', price: "$55 $110 $220" }
         ]
     },
     appetizers: {
@@ -61,16 +57,16 @@ const menu = { // price: "quarter half full"
             { name: 'Chicken 65', price: "$35 $65 $140" },
             { name: 'Orange Chicken', price: "$40 $60 $130" },
             { name: 'Chicken Manchurian', price: "$35 $70 $140" },
-            { name: 'Chinese Fried Rice', price: "$30 $60 $120" },
+            { name: 'Chinese Fried Rice', price: "$30 $50 $100" },
             { name: 'Chicken Chow Mein', price: "$35 $60 $120" },
             { name: 'Veggie Manchurian', price: "$35 $70 $140" },
-            { name: 'Veggie Chow Mein', price: "$30 $60 $120" },
-            { name: 'Veggie Fried Rice', price: "$30 $60 $120" }
+            { name: 'Veggie Chow Mein', price: "$30 $50 $100" },
+            { name: 'Veggie Fried Rice', price: "$30 $50 $100" }
         ]
     },
     pasta: {
         item: [
-            { name: 'Veggie Pasta', price: "$35 $70 $140" },
+            { name: 'Veggie Pasta', price: "$30 $50 $100" },
             { name: 'Chicken Pasta', price: "$35 $60 $120" },
             { name: 'Chicken Alfredo', price: "$35 $60 $120" }
         ]
@@ -81,8 +77,7 @@ const menu = { // price: "quarter half full"
             { name: 'Sheer Khurma', price: "$30 $60 $120" },
             { name: 'Fruit Trifle Custard', price: "$35 $65 $130" },
             { name: 'Shahi Tukra', price: "$35 $65 $130" },
-            { name: 'Zarda', price: "$35 $65 $130" },
-            { name: 'Shahi', price: "$-- $60 $120" }
+            { name: 'Zarda', price: "$35 $60 $120" }
         ]
     }
 }
